@@ -1,11 +1,20 @@
 package com.travix.medusa.busyflights.domain.busyflights;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class BusyFlightsRequest {
 
+    @NotNull
+    @Size(min = 3, max = 3)
     private String origin;
+    @NotNull
+    @Size(min = 3, max = 3)
     private String destination;
     private String departureDate;
     private String returnDate;
+    @NotNull
+    @Size(max = 4)
     private int numberOfPassengers;
 
     public String getOrigin() {
